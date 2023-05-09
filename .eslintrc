@@ -1,0 +1,65 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "airbnb",
+    "prettier",
+    "plugin:@next/next/recommended",
+    "plugin:tailwind/recommended"
+  ],
+  "plugins": ["prettier"],
+  "env": {
+    "browser": true
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@", "./src"],
+          ["@public", "./public"]
+        ],
+        "extensions": [".js", ".svg", ".jsx"]
+      }
+    }
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "rules": {
+    "padding-line-between-statements": [
+      "warn",
+      { "blankLine": "always", "prev": "*", "next": "return" },
+      { "blankLine": "always", "prev": ["const", "let"], "next": "*" },
+      { "blankLine": "any", "prev": ["const", "let"], "next": ["const", "let"] },
+      { "blankLine": "always", "prev": ["case", "default"], "next": "*" },
+      { "blankLine": "any", "prev": ["case", "default"], "next": ["case", "default"] }
+    ],
+    "@next/next/no-img-element": "off",
+    "camelcase": "off",
+    "consistent-return": "off",
+    "import/no-anonymous-default-export": "off",
+    "import/prefer-default-export": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "no-alert": "off",
+    "no-console": ["warn", { "allow": ["warn", "error", "info"] }],
+    "no-restricted-imports": ["error"],
+    "no-script-url": "off",
+    "no-shadow": "off",
+    "no-unused-expressions": "off",
+    "no-unused-vars": "warn",
+    "no-useless-return": "off",
+    "prettier/prettier": ["error", { "singleQuote": true }],
+    "react-hooks/exhaustive-deps": "error",
+    "react/button-has-type": "off",
+    "react/function-component-definition": "off",
+    "react/jsx-no-useless-fragment": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-uses-react": "off",
+    "react/no-array-index-key": "off",
+    "react/no-unstable-nested-components": ["off", { "allowAsProps": true }],
+    "react/prop-types": 0,
+    "react/props-spreading": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/destructuring-assignment": "off",
+    "react/no-unknown-property": "off"
+  }
+}
